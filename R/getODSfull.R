@@ -32,7 +32,7 @@ getODSfull <- function(ODSCode) {
     urlfull <- paste0("https://directory.spineservices.nhs.uk/ORD/2-0-0/organisations/",ODSCode,"?_format=application/json",sep="")
 
     # better to set config elsewhere - not within function ??
-    set_config(config(ssl_verifypeer = 0L))
+    #set_config(config(ssl_verifypeer = 0L))
 
     httpResponse <- GET(urlfull, accept_json())
     getODSfull <- fromJSON(content(httpResponse, "text", encoding="UTF-8"))
