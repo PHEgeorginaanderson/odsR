@@ -108,7 +108,7 @@ getODS <- function(Name              = "All",
     url <- paste0(url,"&_format=application/json&Limit=1000")
 
   # better to set config elsewhere - not within function ??
-  set_config(config(ssl_verifypeer = 0L))
+  #set_config(config(ssl_verifypeer = 0L))
 
   # Get API response
   httpResponse <- GET(url, accept_json())
